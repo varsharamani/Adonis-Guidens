@@ -1,0 +1,80 @@
+Main datatypes in adonis : 
+ -string
+ -number
+ -boolean
+
+Create Project
+npm init adonis-ts-app@latest adonisjs-test-app
+
+
+Run project :
+cd <PROJECT_NAME>
+node ace serve –watch / npm run dev
+
+Install lucid:
+npm install @adonisjs/lucid
+node ace invoke @adonisjs/lucid
+
+
+Database configuration in .env file
+DB_CONNECTION=
+
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_USER= //DB_USER
+MYSQL_PASSWORD= //DB_PASSWORD
+MYSQL_DB_NAME= //DB_NAME
+
+Add Authentication :  
+npm i @adonisjs/auth
+node ace configure @adonisjs/auth
+
+
+❯ Select provider for finding users · lucid
+❯ Select which guard you need for authentication (select using space) · api
+❯ Enter model name to be used for authentication · User
+❯ Create migration for the users table? (y/N) · true
+❯ Select the provider for storing API tokens · database
+❯ Create migration for the api_tokens table? (y/N) · true
+
+To run migration
+node ace migration:run
+
+node ace make:migration posts
+
+node ace make:controller Post
+
+node ace make:model Post
+
+*Mail
+npm i @adonisjs/mail
+
+node ace invoke @adonisjs/mail
+
+❯ Select the mail drivers you are planning to use · smtp
+
+node ace make:mailer RegisterMailer
+
+npm i mjml
+
+* For softdelete in adonis js
+https://www.npmjs.com/package/adonis-lucid-soft-deletes
+
+*For Cron job set - Queue
+https://github.com/Rocketseat/adonis-bull
+
+*Sentry
+Sentry for error/exception handling
+Sentry is an error-tracking platform 
+
+
+Schedule Job : 
+https://www.npmjs.com/package/adonis5-scheduler
+
+
+Queue : 
+https://www.npmjs.com/package/@rocketseat/adonis-bull?activeTab=readme
+https://github.com/Rocketseat/adonis-bull/tree/alpha
+
+Stripe payment : 
+https://www.npmjs.com/package/@mezielabs/adonis-stripe
